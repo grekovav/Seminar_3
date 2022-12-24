@@ -17,4 +17,4 @@ int userAY = getUserValue("Введите Y1 ");
 int userBX = getUserValue("Введите X2 ");
 int userBY = getUserValue("Введите Y2 ");
 double distance = getDistance(userAX, userAY, userBX, userBY);
-Console.WriteLine($"Расстояние между точками {distance}");
+Console.WriteLine($"Расстояние между точками {Math.Round(distance, 2)}");
