@@ -9,6 +9,10 @@ int getUserValue(string message)
     return result;
 }
 int number = getUserValue("Введите пятизначное число: ");
+int digit5 = number % 10;
+int digit4 = number / 10;
+int digit2 = number / 1000;
+int digit1 = number / 10000;
 
 if (number < 10000 || number > 99999)
 {
@@ -16,16 +20,12 @@ if (number < 10000 || number > 99999)
 }
 else
 {
-    int digit5 = number % 10;
-    int digit4 = number / 10;
-    int digit2 = number / 1000;
-    int digit1 = number / 10000;
-    if (digit1 == digit5 || digit2 == digit4)
+    if (digit1 != digit5 && digit2 != digit4)
     {
-        Console.WriteLine($"Ваше число: {number} - палиндром.");
+        Console.WriteLine($"Ваше число: {number} - не палиндром.");
     }
     else
     {
-        Console.WriteLine($"Ваше число: {number} - не палиндром.");
+        Console.WriteLine($"Ваше число: {number} - палиндром.");
     }
 }
